@@ -1,8 +1,9 @@
-package veb.proj.veb.Repository;
+package veb.proj.veb.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import veb.proj.veb.Entity.Komentar;
-
+import org.springframework.stereotype.Repository;
+import veb.proj.veb.entity.Komentar;
+@Repository
 public interface KomentarRepository extends JpaRepository<Komentar, Long> {
     public Komentar getById(Long id);
 }

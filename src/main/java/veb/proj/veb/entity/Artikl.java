@@ -1,6 +1,7 @@
-package veb.proj.veb.Entity;
+package veb.proj.veb.entity;
 
 import javax.persistence.*;
+
 
 @Entity
 public class Artikl {

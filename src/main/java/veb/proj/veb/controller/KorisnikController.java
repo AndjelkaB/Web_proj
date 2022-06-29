@@ -1,4 +1,5 @@
-package veb.proj.veb.Controller;
+package veb.proj.veb.controller;
 
 public class KorisnikController {
 }
+

@@ -1,9 +1,9 @@
-package veb.proj.veb.Service;
+package veb.proj.veb.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import veb.proj.veb.Entity.Korisnik;
-import veb.proj.veb.Repository.KorisnikRepository;
+import veb.proj.veb.entity.Korisnik;
+import veb.proj.veb.repository.KorisnikRepository;
 
 @Service
 public class KorisnikService {

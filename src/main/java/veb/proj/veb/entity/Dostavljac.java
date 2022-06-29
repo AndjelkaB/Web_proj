@@ -1,4 +1,5 @@
-package veb.proj.veb.Entity;
+package veb.proj.veb.entity;
+
 import java.util.Set;
 import java.util.HashSet;
 import javax.persistence.*;

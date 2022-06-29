@@ -1,8 +1,10 @@
-package veb.proj.veb.Repository;
+package veb.proj.veb.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import veb.proj.veb.Entity.Artikl;
+import org.springframework.stereotype.Repository;
+import veb.proj.veb.entity.Artikl;
 
+@Repository
 public interface ArtiklRepository extends JpaRepository<Artikl, Long> {
     public Artikl getById(Long id);
 

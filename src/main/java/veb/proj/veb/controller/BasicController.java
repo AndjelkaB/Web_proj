@@ -1,4 +1,4 @@
-package veb.proj.veb.Controller;
+package veb.proj.veb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
