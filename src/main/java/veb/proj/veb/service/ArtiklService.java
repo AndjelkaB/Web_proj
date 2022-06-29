@@ -25,7 +25,7 @@ public class ArtiklService {
     {
         artiklRepository.save(a);
     }
-    
+
     public void Delete(Artikl a)
     {
         artiklRepository.delete(a);
