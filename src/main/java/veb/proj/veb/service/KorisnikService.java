@@ -16,10 +16,9 @@ public class KorisnikService {
     public KorisnikRepository korisnikRepository;
 
     // registracija
-
-    public Korisnik RegisterKorisnik(Korisnik korisnik) {
-        return korisnikRepository.save(korisnik);
-    }
+    /* public Korisnik RegisterKorisnik(Korisnik korisnik) {
+     //   return korisnikRepository.save(korisnik);
+    } */
 
     // login
     public Korisnik login(String username, String lozinka) {

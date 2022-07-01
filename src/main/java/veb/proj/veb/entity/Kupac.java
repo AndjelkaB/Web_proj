@@ -22,7 +22,7 @@ public class Kupac extends Korisnik {
     private TipKupca tipKupca;
 
     public Kupac()
-    {}
+    { }
 
     public Kupac(Long id, String korisnickoIme, String lozinka, String ime, String prezime, String uloga, String datumRodjenja, String pol, int brojBodova, Set<Porudzbina> porudzbinas, Set<Komentar> komentars, TipKupca tipKupca) {
         super(id, korisnickoIme, lozinka, ime, prezime, uloga, datumRodjenja, pol);
