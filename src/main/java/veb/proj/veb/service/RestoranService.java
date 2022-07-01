@@ -7,6 +7,7 @@ import veb.proj.veb.entity.Restoran;
 import veb.proj.veb.repository.RestoranRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RestoranService {
@@ -14,24 +15,35 @@ public class RestoranService {
     @Autowired
     private RestoranRepository restoranRepository;
 
-    public Restoran GetOne(Long id) {
-        return restoranRepository.getById(id);
+    // pretraga restorana po ID
+    public Restoran findOne(Long id) {
+        Optional<Restoran> restoran = restoranRepository.findById(id);
+        if (restoran.isPresent())
+            return restoran.get();
+
+        return null;
     }
 
-    public List<Restoran> GetAll()
-    {
-        return restoranRepository.findAll();
-    }
+    // lista svih restorana
+    public List<Restoran> findAll() { return restoranRepository.findAll(); }
 
+    // dodavanje novog restorana
     public void Save(Restoran r)
     {
         restoranRepository.save(r);
     }
 
+    // brisanje restorana
     public void Delete(Restoran r)
     {
         restoranRepository.delete(r);
     }
 
+    public Restoran getByNaziv (String naziv) {
+        return restoranRepository.getByNaziv(naziv);
+    }
 
+    public Restoran getByLokacija(String lokacija) {
+        return restoranRepository.getByLocation(lokacija);
+    }
 }

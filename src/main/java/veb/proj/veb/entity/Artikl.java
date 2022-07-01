@@ -14,7 +14,7 @@ public class Artikl {
     private String naziv;
 
     @Column
-    private String tipArtikla; //jelo, pice
+    private TipHrane tipHrane;
 
     @Column
     private int cijena;
@@ -32,10 +32,10 @@ public class Artikl {
     private Porudzbina porudzbina;
 
 
-    public Artikl(Long id, String naziv, String tipArtikla, int cijena, int kolicina, String opis, Restoran restoran) {
+    public Artikl(Long id, String naziv, TipHrane tipHrane, int cijena, int kolicina, String opis, Restoran restoran) {
         this.id = id;
         this.naziv = naziv;
-        this.tipArtikla = tipArtikla;
+        this.tipHrane = tipHrane;
         this.cijena = cijena;
         this.kolicina = kolicina;
         this.opis = opis;
@@ -58,12 +58,12 @@ public class Artikl {
         this.naziv = naziv;
     }
 
-    public String getTipArtikla() {
-        return tipArtikla;
+    public TipHrane getTipHrane() {
+        return tipHrane;
     }
 
-    public void setTipArtikla(String tipArtikla) {
-        this.tipArtikla = tipArtikla;
+    public void setTipHrane(TipHrane tipHrane) {
+        this.tipHrane = tipHrane;
     }
 
     public int getCijena() {

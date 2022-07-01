@@ -11,5 +11,9 @@ import java.util.List;
 public interface RestoranRepository extends JpaRepository<Restoran,Long> {
     public Restoran getById (Long id);
 
+    public Restoran getByNaziv(String naziv);
+
+    public Restoran getByLocation(String lokacija);
+
 
 }

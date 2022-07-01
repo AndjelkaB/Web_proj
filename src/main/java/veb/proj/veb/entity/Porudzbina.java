@@ -34,6 +34,8 @@ public class Porudzbina {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Dostavljac dostavljac;
 
+    public Porudzbina() {}
+
     public Porudzbina(Long id, Set<Artikl> artikli, Restoran restoran, String datum, String statusPorudzbine, double cena, Kupac kupac, Dostavljac dostavljac) {
         this.id = id;
         this.artikli = artikli;

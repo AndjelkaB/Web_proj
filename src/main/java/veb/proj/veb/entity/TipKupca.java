@@ -14,6 +14,9 @@ public class TipKupca implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
+    private Tip tip;
+
     @Column
     private int brojBodova;
 
@@ -23,12 +26,16 @@ public class TipKupca implements Serializable {
     @OneToMany(mappedBy = "tipKupca", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Kupac> kupci = new HashSet<>();
 
+    public TipKupca() {};
+
     public TipKupca(Long id, int brojBodova, int popust, Set<Kupac> kupci) {
         this.id = id;
         this.brojBodova = brojBodova;
         this.popust = popust;
         this.kupci = kupci;
     }
+
+    public Tip getTip() { return  tip; }
 
     public Long getId() {
         return id;
