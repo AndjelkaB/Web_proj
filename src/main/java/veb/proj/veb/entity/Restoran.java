@@ -15,7 +15,10 @@ public class Restoran {
     private String naziv;
 
     @Column
-    private String tipRestorana; //Italijanski, Kineski, Indijski, Tradicionalni, Americki
+    private TipRestorana tipRestorana; //Italijanski, Kineski, Indijski, Tradicionalni, Americki
+
+    @Column
+    private StatusRestorana status;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "restoran")
     private Set<Artikl> artikli = new HashSet<>();
@@ -37,7 +40,9 @@ public class Restoran {
         this.menadzer = menadzer;
     }
 
-    public Restoran(Long id, String naziv, String tipRestorana, Set<Artikl> artikli, Lokacija lokacija, Set<Porudzbina> porudzbine) {
+    public Restoran() {}
+
+    public Restoran(Long id, String naziv, TipRestorana tipRestorana, Set<Artikl> artikli, Lokacija lokacija, Set<Porudzbina> porudzbine) {
         this.id = id;
         this.naziv = naziv;
         this.tipRestorana = tipRestorana;
@@ -62,11 +67,11 @@ public class Restoran {
         this.naziv = naziv;
     }
 
-    public String getTipRestorana() {
+    public TipRestorana getTipRestorana() {
         return tipRestorana;
     }
 
-    public void setTipRestorana(String tipRestorana) {
+    public void setTipRestorana(TipRestorana tipRestorana) {
         this.tipRestorana = tipRestorana;
     }
 
@@ -93,4 +98,14 @@ public class Restoran {
     public void setPorudzbine(Set<Porudzbina> porudzbine) {
         this.porudzbine = porudzbine;
     }
+
+    public StatusRestorana getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusRestorana status) {
+        this.status = status;
+    }
+
+
 }

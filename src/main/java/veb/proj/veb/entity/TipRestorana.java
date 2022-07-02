@@ -1,8 +1,9 @@
 package veb.proj.veb.entity;
 
 public enum TipRestorana {
-    srpski,
+    tradicionalni,
     kineski,
     americki,
     italijanski,
+    indijski
 }

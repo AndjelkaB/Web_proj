@@ -24,6 +24,8 @@ public class KomentarService {
         return komentarRepository.findAll();
     }
 
+    public List<Komentar> getByRestoranId(Long id) { return komentarRepository.getByRestoranId(id); }
+
     public void Save(Komentar k)
     {
         komentarRepository.save(k);
