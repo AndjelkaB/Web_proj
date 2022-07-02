@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    font-family:'Syne Mono',serif;
+    font-family:'verdana',serif;
     background-color: rgb(192, 241, 127);
 }
 
 .navbar a, h1, h2, h3, h4, h5, h6, p{
-    font-family:'Syne Mono', sans-serif;
+    font-family:'cursive', cursive;
+    font-color: #D1F2EB;
 }
 
 .logo{
@@ -19,7 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: #00FFFF;
     margin: 0 auto;
     width: 6%;
 }
@@ -52,7 +53,7 @@ body{
 }
 
 .bg-boja{
-    background-color: rgb(241, 255, 111);
+    background-color: rgb(209, 242, 235);
 }
 
 .my-carousel .carousel-item
@@ -66,7 +67,7 @@ body{
 }
 
 footer {
-    background-color: rgb(221, 231, 76);
+    background-color: rgb(209, 242, 235);
     height:45px;
     position: fixed;
     display: flex;
