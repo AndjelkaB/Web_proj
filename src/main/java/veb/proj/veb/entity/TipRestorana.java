@@ -5,5 +5,6 @@ public enum TipRestorana {
     kineski,
     americki,
     italijanski,
-    indijski
+    indijski,
+    francuski
 }
