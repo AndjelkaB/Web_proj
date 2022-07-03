@@ -58,7 +58,7 @@ public class RestoranDto {
         return lokacija;
     }
 
-    public void setLokacija(Lokacija lokacija) {
+    public void setLokacija(String lokacija) {
         this.lokacija = lokacija;
     }
 

@@ -49,7 +49,7 @@ public class RestoranRestController {
         restoranDto.setArtikli(restoran.getArtikli());
         restoranDto.setKomentari(komentari);
         restoranDto.setStatus(restoran.getStatus().toString());
-        restoranDto.setLokacija(restoran.getLokacija());
+        restoranDto.setLokacija(restoran.getLokacija().toString());
 
         return ResponseEntity.ok((restoranDto));
     }
