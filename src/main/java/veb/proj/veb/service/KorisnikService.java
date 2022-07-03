@@ -22,7 +22,7 @@ public class KorisnikService {
 
     // login
     public Korisnik login(String username, String lozinka) {
-        Korisnik korisnik = korisnikRepository.getByUsername(username);
+        Korisnik korisnik = korisnikRepository.getByKorisnickoIme(username);
         if (korisnik == null || !korisnik.getLozinka().equals(lozinka))
             return null;
         return  korisnik;
@@ -45,14 +45,14 @@ public class KorisnikService {
     // odabir jednog korisnika po korisnickom imenu
 
     public Korisnik getByUsername(String username) {
-        Korisnik korisnik = korisnikRepository.getByUsername(username);
+        Korisnik korisnik = korisnikRepository.getByKorisnickoIme(username);
         return korisnik;
     }
 
     // odabir jednog korisnika po ulozi
 
-    public Korisnik getByRole(Uloga uloga) {
-        Korisnik korisnik = korisnikRepository.getByRole(uloga);
+    public Korisnik getByRole(String uloga) {
+        Korisnik korisnik = korisnikRepository.getByUloga(uloga);
         return korisnik;
     }
 

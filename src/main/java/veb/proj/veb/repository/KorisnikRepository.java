@@ -7,9 +7,9 @@ import veb.proj.veb.entity.Uloga;
 import java.io.Serializable;
 
 public interface KorisnikRepository extends JpaRepository<Korisnik, Long> {
-    Korisnik getByUsername(String username);
+    Korisnik getByKorisnickoIme(String username);
 
-    Korisnik getByRole(Uloga uloga);
+    Korisnik getByUloga(String uloga);
 
     public Korisnik getById(Long Id);
 }

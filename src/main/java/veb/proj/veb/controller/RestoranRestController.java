@@ -53,7 +53,7 @@ public class RestoranRestController {
 
     // kreiranje novog restorana
 
-    @PostMapping("/api/restoran/creaate")
+    @PostMapping("/api/restoran/create")
     public ResponseEntity<String> createRestoran(@RequestBody RestoranDto restoranDto) {
 
         if(restoranDto.getNaziv().isEmpty()) {
@@ -83,9 +83,9 @@ public class RestoranRestController {
 
     // pretraga restorana po lokaciji
 
-    @GetMapping("/api/restorani/lokacija/{lokacija}")
-    public ResponseEntity<Restoran> getByLokacija (@PathVariable Lokacija lokacija) {
-        Restoran restoran = restoranService.getByLocation(lokacija);
+    @GetMapping("/api/restorani/lokacija/{id}")
+    public ResponseEntity<Restoran> getByLokacija (@PathVariable Long id) {
+        Restoran restoran = restoranService.getByLocation(id);
         return ResponseEntity.ok(restoran);
     }
 }

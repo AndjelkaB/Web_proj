@@ -27,7 +27,7 @@ public class ArtiklService {
 
    /// public  Artikl GetOne(Long id) {
         //return artiklRepository.getById(id);
-    //}
+//    }
 
     public List<Artikl> findAll()
     {

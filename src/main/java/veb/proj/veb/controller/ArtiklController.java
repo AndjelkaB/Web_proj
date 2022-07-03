@@ -43,9 +43,7 @@ public class ArtiklController {
         artikl.setCijena(artikl.getCijena());
         artikl.setKolicina(artiklDto.getKolicina());
 
-        Restoran restoran;
-
-        restoran = restoranService.findOne(artiklDto.getRestoranID());
+        Restoran restoran = restoranService.findOne(artiklDto.getRestoranID());
         artikl.setRestoran(restoran);
 
         this.artiklService.Save(artikl);

@@ -9,13 +9,13 @@ import veb.proj.veb.entity.Restoran;
 import veb.proj.veb.entity.TipRestorana;
 
 import java.util.List;
-@Repository
+
 public interface RestoranRepository extends JpaRepository<Restoran,Long> {
     public Restoran getById (Long id);
 
     public Restoran getByNaziv(String naziv);
 
-    public Restoran getByLocation(Lokacija lokacija);
+    public Restoran getByLokacija(Long id_lokacije);
 
     public Restoran getByTipRestorana(TipRestorana tipRestorana);
 
