@@ -3,6 +3,7 @@ package veb.proj.veb.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import veb.proj.veb.entity.Artikl;
+import veb.proj.veb.entity.Lokacija;
 import veb.proj.veb.entity.Restoran;
 import veb.proj.veb.repository.RestoranRepository;
 
@@ -43,7 +44,7 @@ public class RestoranService {
         return restoranRepository.getByNaziv(naziv);
     }
 
-    public Restoran getByLokacija(String lokacija) {
+    public Restoran getByLokacija(Lokacija lokacija) {
         return restoranRepository.getByLocation(lokacija);
     }
 }

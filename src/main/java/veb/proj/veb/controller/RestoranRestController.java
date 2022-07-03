@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import veb.proj.veb.entity.Komentar;
-import veb.proj.veb.entity.Menadzer;
-import veb.proj.veb.entity.Restoran;
-import veb.proj.veb.entity.StatusRestorana;
+import veb.proj.veb.entity.*;
 import veb.proj.veb.entityDto.RestoranDto;
 import veb.proj.veb.service.KomentarService;
 import veb.proj.veb.service.KorisnikService;
@@ -87,7 +84,7 @@ public class RestoranRestController {
     // pretraga restorana po lokaciji
 
     @GetMapping("/api/restorani/lokacija/{lokacija}")
-    public ResponseEntity<Restoran> getByLokacija (@PathVariable String lokacija) {
+    public ResponseEntity<Restoran> getByLokacija (@PathVariable Lokacija lokacija) {
         Restoran restoran = restoranService.getByLokacija(lokacija);
         return ResponseEntity.ok(restoran);
     }
