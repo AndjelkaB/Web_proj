@@ -17,7 +17,7 @@ public class BasicController {
 
     //--------------------------------------//
     @GetMapping("/")
-    public String home() {return "home.html";}
+    public String home() {return "index.html";}
 
     //--------------------------------------//
 
