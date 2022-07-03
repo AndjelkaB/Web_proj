@@ -44,7 +44,7 @@ public class RestoranService {
         return restoranRepository.getByNaziv(naziv);
     }
 
-    public Restoran getByLokacija(Lokacija lokacija) {
+    public Restoran getByLocation(Lokacija lokacija) {
         return restoranRepository.getByLocation(lokacija);
     }
 }

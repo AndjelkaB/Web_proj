@@ -25,7 +25,7 @@ public class BasicController {
     public String signup(Model model) {
         Korisnik korisnik = new Korisnik();
         model.addAttribute("korisnik", korisnik);
-        return "signup.html";
+        return "registracija.html";
     }
 
 }

@@ -85,7 +85,7 @@ public class RestoranRestController {
 
     @GetMapping("/api/restorani/lokacija/{lokacija}")
     public ResponseEntity<Restoran> getByLokacija (@PathVariable Lokacija lokacija) {
-        Restoran restoran = restoranService.getByLokacija(lokacija);
+        Restoran restoran = restoranService.getByLocation(lokacija);
         return ResponseEntity.ok(restoran);
     }
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import veb.proj.veb.entity.Artikl;
 import veb.proj.veb.repository.ArtiklRepository;
+import veb.proj.veb.repository.RestoranRepository;
 
 import javax.swing.plaf.PanelUI;
 import java.util.List;
@@ -14,16 +15,19 @@ public class ArtiklService {
     @Autowired
     private ArtiklRepository artiklRepository;
 
-    public  Artikl findOne(Long id) {
+    @Autowired
+    private RestoranRepository restoranRepository;
+
+    public Artikl findOne(Long id) {
         Optional<Artikl> pronadjiAtrikl = artiklRepository.findById(id);
         if (pronadjiAtrikl.isPresent())
             return pronadjiAtrikl.get();
         return null;
     }
 
-    public  Artikl GetOne(Long id) {
-        return artiklRepository.getById(id);
-    }
+   /// public  Artikl GetOne(Long id) {
+        //return artiklRepository.getById(id);
+    //}
 
     public List<Artikl> findAll()
     {

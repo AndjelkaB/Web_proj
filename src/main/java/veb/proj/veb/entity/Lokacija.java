@@ -20,7 +20,10 @@ public class Lokacija {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+   // @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //private Restoran restoran;
+
+    @OneToOne
     private Restoran restoran;
 
     public Lokacija(String geografskaDuzina, String geografskaSirina, String adresa, Long id, Restoran restoran) {
@@ -70,4 +73,6 @@ public class Lokacija {
     public void setRestoran(Restoran restoran) {
         this.restoran = restoran;
     }
+
+    public Lokacija() {}
 }
